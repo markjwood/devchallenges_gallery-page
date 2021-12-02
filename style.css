@@ -47,6 +47,11 @@ button {
 
 nav > ul {
 	list-style: none;
+	padding: 0;
+}
+
+a {
+	transition: color 300ms;
 }
 
 /* ----------------- */
@@ -79,10 +84,17 @@ h1 {
 }
 
 /* ----------------- */
-/* layout            */
+/* general styling   */
 /* ----------------- */
 
 body {
+	/* push footer to bottom of screen */
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.container {
 	max-width: 375px;
 	padding-inline: 0.75rem;
 	margin-inline: auto;
@@ -126,14 +138,57 @@ img.profile {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 0.75em;
+	margin-bottom: 4em;
 }
 .gallery > img {
+	cursor: pointer;
 	border-radius: 0.75em;
-	box-shadow: 0 4px 6px hsl(0 0% 0% / 0.15);
+	box-shadow: 0 0.25em var(--blur, 0.375em) hsl(0 0% 0% / var(--alpha, 0.15));
+	transition: transform 300ms, box-shadow 300ms;
+}
+
+.gallery > img:hover {
+	--alpha: 0.8;
+	--blur: 0.75em;
+	transform: scale(1.15);
 }
 .two-col {
 	grid-column: span 2;
 }
 .two-row {
 	grid-row: span 2;
+}
+
+/* footer */
+footer {
+	width: 100%;
+	font-size: 0.75rem;
+	font-weight: 400;
+	background-image: linear-gradient(
+		to top,
+		hsl(172 29% 85%),
+		hsl(172 15% 90%),
+		transparent
+	);
+	color: hsl(var(--hsl-txt-dark) / 0.7);
+	line-height: 1.5;
+	padding: 2em 0;
+	text-align: center;
+
+	/* push footer to bottom of screen */
+	margin-top: auto;
+}
+footer a {
+	font-weight: 700;
+	color: hsl(var(--hsl-txt-dark) / var(--alpha, 1));
+}
+footer a:hover {
+	--alpha: 0.7;
+}
+.social > ul {
+	margin: 0.25em 0 0 0;
+	font-size: 1.5rem;
+	display: flex;
+	gap: 2em;
+	justify-content: center;
 }

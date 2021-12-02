@@ -24,12 +24,20 @@
 			rel="stylesheet"
 		/>
 
+		<!-- font awesome -->
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+			integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+			crossorigin="anonymous"
+		/>
+
 		<link rel="stylesheet" href="style.css" />
 
 		<title>Gallery</title>
 	</head>
 	<body>
-		<header>
+		<header class="container">
 			<img src="./profilePhoto.png" alt="My face" class="profile" />
 			<h1 class="name">Rodney Cotton</h1>
 			<p class="subhead">Helsinki, Finland</p>
@@ -48,7 +56,7 @@
 				</div>
 			</section>
 		</header>
-		<main class="gallery">
+		<main class="container gallery">
 			<img src="./photo1.png" alt="" />
 			<img class="two-col" src="./photo2.png" alt="" />
 			<img class="two-col" src="./photo3.png" alt="" />
@@ -57,29 +65,29 @@
 			<img src="./photo5.png" alt="" />
 		</main>
 		<footer>
-			<p>
+			<p class="container">
 				created by <a href="https://markjwood.com">markjwood</a> - a
 				devChallenges.io challenge
 			</p>
-			<div class="social largest">
+			<nav class="container social">
 				<ul>
 					<li>
-						<a href="https://github.com/markjwood"
+						<a target="social" href="https://github.com/markjwood"
 							><i class="fab fa-github-square"></i>
 						</a>
 					</li>
 					<li>
-						<a href="https://twitter.com/MarkJasonWood"
+						<a target="social" href="https://twitter.com/MarkJasonWood"
 							><i class="fab fa-twitter-square"></i
 						></a>
 					</li>
 					<li>
-						<a href="https://www.markjwood.com/contact.html"
+						<a target="social" href="https://www.markjwood.com/contact.html"
 							><i class="fas fa-envelope-square"></i
 						></a>
 					</li>
 				</ul>
-			</div>
+			</nav>
 		</footer>
 	</body>
 </html>
