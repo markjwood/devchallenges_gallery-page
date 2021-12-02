@@ -1,0 +1,121 @@
+/* ----------------- */
+/* custom properties */
+/* ----------------- */
+
+:root {
+	/* colors */
+	--hsl-txt-dark: 160 2% 31%;
+	--hsl-txt-light: 0 0% 74%;
+	--hsl-txt-lightest: 0 0% 66%;
+	--hsl-bg-dark: 0 0% 90%;
+}
+
+/* ----------------- */
+/* reset             */
+/* ----------------- */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body,
+p,
+h1,
+h2,
+h3 {
+	margin: 0;
+}
+
+img,
+picture {
+	display: block;
+	max-width: 100%;
+}
+
+button,
+input,
+textarea,
+figcaption {
+	font: inherit;
+}
+
+button {
+	cursor: pointer;
+}
+
+nav > ul {
+	list-style: none;
+}
+
+/* ----------------- */
+/* typography        */
+/* ----------------- */
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+}
+
+h1,
+h2 {
+	color: hsl(var(--hsl-txt-dark));
+}
+h1 {
+	font-size: 0.875rem;
+}
+.stats p,
+.stats h2 {
+	font-size: 0.75rem;
+}
+.stats p {
+	color: hsl(var(--hsl-txt-light));
+}
+
+.subhead {
+	font-size: 0.625rem;
+	color: hsl(var(--hsl-txt-lightest));
+}
+
+/* ----------------- */
+/* layout            */
+/* ----------------- */
+
+body {
+	max-width: 375px;
+	padding-inline: 0.75rem;
+	margin-inline: auto;
+}
+
+/* header */
+header {
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+}
+
+img.profile {
+	width: 30%;
+	border-radius: 1rem;
+}
+
+.stats {
+	display: flex;
+	justify-content: center;
+	gap: 0.75rem;
+	line-height: 1.1;
+}
+.stats > div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 0.25em;
+	width: 78px;
+	height: 52px;
+	background-color: hsl(var(--hsl-bg-dark));
+	border-radius: 0.75rem;
+}
