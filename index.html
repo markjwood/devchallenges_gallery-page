@@ -56,13 +56,28 @@
 				</div>
 			</section>
 		</header>
-		<main class="container gallery">
-			<img src="./photo1.png" alt="" />
-			<img class="two-col" src="./photo2.png" alt="" />
-			<img class="two-col" src="./photo3.png" alt="" />
-			<img class="two-row" src="./photo_4.png" alt="" />
-			<img src="./photo6.png" alt="" />
-			<img src="./photo5.png" alt="" />
+		<main class="container">
+			<div class="modal-overlay hidden" id="modal-overlay">
+				<button class="modal-close" id="modal-close">&times;</button>
+				<div class="modal-img" id="modal-img">
+					<div class="scrolling-buttons" id="scrolling-buttons">
+						<button class="prev" name="prev">
+							<i class="fas fa-chevron-left"></i>
+						</button>
+						<button class="next" name="next">
+							<i class="fas fa-chevron-right"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="gallery" id="gallery">
+				<img src="./photo1.png" alt="" tabindex="0" />
+				<img class="two-col" src="./photo2.png" alt="" tabindex="0" />
+				<img class="two-col" src="./photo3.png" alt="" tabindex="0" />
+				<img class="two-row" src="./photo_4.png" alt="" tabindex="0" />
+				<img src="./photo6.png" alt="" tabindex="0" />
+				<img src="./photo5.png" alt="" tabindex="0" />
+			</div>
 		</main>
 		<footer>
 			<p class="container">
@@ -89,5 +104,7 @@
 				</ul>
 			</nav>
 		</footer>
+
+		<script src="./script.js"></script>
 	</body>
 </html>
