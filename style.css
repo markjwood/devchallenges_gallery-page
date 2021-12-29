@@ -251,3 +251,45 @@ footer a:hover {
 	gap: 2em;
 	justify-content: center;
 }
+
+/* ------------- */
+/* media queries */
+/* ------------- */
+
+@media screen and (min-width: 1200px) {
+	h1 {
+		font-size: 1.5rem;
+	}
+	.stats h2 {
+		font-size: 1.125rem;
+	}
+	.stats p {
+		font-size: 0.875rem;
+	}
+	.subhead {
+		font-size: 0.875rem;
+	}
+
+	header {
+		gap: 0;
+	}
+	header h1 {
+		margin-block: 1em 0.5em;
+	}
+	.stats {
+		margin-block: 1.5rem 4rem;
+		gap: 1.5rem;
+	}
+	.stats > div {
+		width: 100px;
+		height: 67px;
+	}
+
+	.container {
+		max-width: 59.75em;
+	}
+
+	.gallery {
+		gap: 2em;
+	}
+}
